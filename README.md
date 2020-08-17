@@ -6,8 +6,6 @@
 
 This image allows you to deploy a github actions runner in every environment running docker.
 
-I tested it in Kubernetes, Pivotal Cloud Foundry and OpenShift 3.11.
-
 ## Usage
 
 Github Actions runner needs at least the token and url obtained from https://github.com/yourorganization/yourproject/settings/actions/add-new-runner so you can execute this command:
@@ -48,6 +46,14 @@ You can also set the following mount points by passing the -v /host:/container f
 VOLUME ["/_work"]
 
 To use a volume you can add `-v $PWD/workspace:/_work`.
+
+## Tests
+
+I tested it in Kubernetes, Pivotal Cloud Foundry and
+
+OpenShift 3.11:
+![](./OpenShift311.png)
+
 
 ## Modify this docker image
 
